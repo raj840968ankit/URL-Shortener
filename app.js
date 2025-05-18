@@ -10,7 +10,7 @@ const filepath = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(filepath)
 const jsonFilePath = path.join(__dirname, "data", "links.json")
 
-const port = 3001
+const port = process.env.PORT || 3000
 
 const serveFile = async (res, filePath, header) => {
     try {
