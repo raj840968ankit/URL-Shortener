@@ -3,13 +3,20 @@
   "version": "1.0.0",
   "description": "",
   "main": "script.js",
-  "type": "module",
   "scripts": {
     "dev" : "node --watch server.js",
     "start": "node server.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raj840968ankit/URL-Shortener.git"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs"
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/raj840968ankit/URL-Shortener/issues"
+  },
+  "homepage": "https://github.com/raj840968ankit/URL-Shortener#readme"
 }
