@@ -10,7 +10,7 @@ const displayLinks = async () => {
 
         Object.keys(links).forEach((link) => {
             let url = links[link];
-            let truncUrl = url.length > 35 ? url.slice(0, 35) : url;
+            let truncUrl = url.length > 35 ? `${url.slice(0, 35)}....` : url;
             const li = document.createElement("li");
             li.innerHTML = `<a href="/${link}" target="_blank">${window.location.origin}/${link}</a> - ${truncUrl}`
             // target="_blank": Opens the link in a new tab.
