@@ -81,26 +81,37 @@ body {
 }
 .shorten-links {
     width: 85%;
+    max-width: 85%;             /* absolute cap at 85% */
     display: flex;
-    flex-wrap: wrap; /* Wrap items to the next line if needed */
-    justify-content: center; /* Center the items horizontally */
+    flex-wrap: wrap;
+    justify-content: center;
     list-style: none;
     padding: 0;
-    margin: 20px auto; /* Auto for horizontal centering */
+    margin: 20px auto;
     gap: 15px;
-    height: auto; /* Allows height to grow as needed */
+    box-sizing: border-box;     /* include padding/gap in width */
 }
 
 .shorten-links li {
+    /* make sure each item can’t exceed the UL’s width */
+    max-width: 100%;           
+    /* allow text to wrap instead of stretching the box */
+    word-wrap: break-word;      
+    /* or use word-break if you need to break really long strings */
+    /* word-break: break-all;   */
+    
     background-color: #f0f0f0;
     padding: 10px 20px;
     border-radius: 8px;
     text-align: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-sizing: border-box;
 }
 
-.shorten-links a {
+.shorten-links li a {
     text-decoration: none;
     color: #007bff;
     font-weight: bold;
+    /* ensure links wrap too */
+    word-break: break-all;
 }
