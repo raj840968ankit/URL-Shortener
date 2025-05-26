@@ -5,7 +5,7 @@ const displayLinks = async () => {
         const response = await fetch('/links')
         const links = await response.json();
         console.log(links);
-        const linkList = document.querySelector(".shorten-links")
+        const linkList = document.querySelector("#shortened-urls")
         linkList.innerHTML = ""
 
         Object.keys(links).forEach((link) => {
